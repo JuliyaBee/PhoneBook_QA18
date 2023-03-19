@@ -61,6 +61,8 @@ public class RegistrationTest extends TestBase {
         // Assert.assertTrue(app.getUser().isElementPresent(By.xpath("//a[text()='ADD']")));
         Assert.assertTrue(app.getUser().isElementPresent(By.xpath("//a[.='ADD']")));
     }
+
+
     //  public void pause(int time) {
 //    try {
 //        Thread.sleep(time);
@@ -134,10 +136,10 @@ public class RegistrationTest extends TestBase {
         //  Assert.assertFalse(wd.findElement(By.xpath("//a[text='ADD']")).getText().equals("ADD"));
     }
 
-
-   @AfterMethod
-    public void tearDown() {
-        //   wd.quit();
-    }
+//
+//   @AfterMethod
+//    public void tearDown() {
+//        //   wd.quit();
+//    }
 
 }

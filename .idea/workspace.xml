@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6124f2f8-f798-4ba0-837c-0a85254acd94" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/manager/HelperUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LoginRegistrationTest2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RegistrationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RegistrationTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +52,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="ed97d6b1-1407-4c56-aaf9-940e827b085a" />
+        <option name="url" value="https://github.com/JuliyaBee/PhoneBook_QA18.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -70,6 +78,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/juliy/QA_18/PhoneBook_QA18&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
