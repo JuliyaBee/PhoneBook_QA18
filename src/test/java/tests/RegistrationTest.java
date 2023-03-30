@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class RegistrationTest extends TestBase {
-  WebDriver wd;
+    WebDriver wd;
     int i = (int) ((System.currentTimeMillis() / 1000) % 3600);
     String correctEmail = "tulip" + i + "@gmail.com";
     String correctPassword = "Kanareyka17$";
@@ -41,9 +41,11 @@ public class RegistrationTest extends TestBase {
                 email(correctEmail).
                 password(correctPassword).
                 build();
+        logger.info("regPositiveTest starts with:" + user.getEmail() + " & " + user.getPassword());
         app.getUser().openLoginRegistrationForm();
         app.getUser().fillLoginRegistrationForm(user);
         app.getUser().submitRegistration();
+        logger.info("regPositiveTest completed");
         Assert.assertTrue(app.getUser().isElementPresent(By.xpath("//a[.='ADD']")));
     }
 
@@ -67,7 +69,9 @@ public class RegistrationTest extends TestBase {
         app.getUser().openLoginRegistrationForm();
         app.getUser().fillLoginRegistrationForm(user);
         app.getUser().submitRegistration();
-        Assert.assertFalse(wd.findElement(By.xpath("//a[text()='ADD']")).getText().equals("ADD"));
+
+        Assert.assertTrue(app.getUser().isErrorFormatMessage());
+        Assert.assertTrue(app.getUser().isAlertPresent());
     }
 
     @Test
@@ -78,7 +82,9 @@ public class RegistrationTest extends TestBase {
         app.getUser().openLoginRegistrationForm();
         app.getUser().fillLoginRegistrationForm(user);
         app.getUser().submitRegistration();
-        Assert.assertFalse(wd.findElement(By.xpath("//a[text='ADD']")).getText().equals("ADD"));
+        Assert.assertTrue(app.getUser().isErrorFormatMessage());
+        Assert.assertTrue(app.getUser().isAlertPresent());
+
     }
 
     @Test
@@ -90,13 +96,14 @@ public class RegistrationTest extends TestBase {
         app.getUser().openLoginRegistrationForm();
         app.getUser().fillLoginRegistrationForm(user);
         app.getUser().submitRegistration();
-        Assert.assertFalse(wd.findElement(By.xpath("//a[text='ADD']")).getText().equals("ADD"));
+        Assert.assertTrue(app.getUser().isErrorFormatMessage());
+        Assert.assertTrue(app.getUser().isAlertPresent());
     }
+}
 
-//
 //   @AfterMethod
 //    public void tearDown() {
-//        //   wd.quit();
+//        wd.quit();
 //    }
-
-}
+//
+//}

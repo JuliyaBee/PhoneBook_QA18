@@ -1,0 +1,39 @@
+4578 [Test worker] INFO  manager.MyListener -%PARSER_ERROR[kvp]- Start searching element by By.xpath: //button[text='Sign Out']
+14672 [Test worker] INFO  manager.MyListener -%PARSER_ERROR[kvp]- The element with locator by By.xpath: //button[text='Sign Out']is found successfully
+14678 [Test worker] INFO  tests.TestBase -%PARSER_ERROR[kvp]- regPositiveTest starts with:tulip3411@gmail.com & Kanareyka17$
+14678 [Test worker] INFO  manager.MyListener -%PARSER_ERROR[kvp]- Start searching element by By.xpath: //a[@href='/login']
+14704 [Test worker] INFO  manager.MyListener -%PARSER_ERROR[kvp]- The element with locator by By.xpath: //a[@href='/login']is found successfully
+14784 [Test worker] INFO  manager.MyListener -%PARSER_ERROR[kvp]- Start searching element by By.xpath: //input[1]
+14804 [Test worker] INFO  manager.MyListener -%PARSER_ERROR[kvp]- The element with locator by By.xpath: //input[1]is found successfully
+14942 [Test worker] INFO  manager.MyListener -%PARSER_ERROR[kvp]- Start searching element by By.xpath: //input[2]
+14956 [Test worker] INFO  manager.MyListener -%PARSER_ERROR[kvp]- The element with locator by By.xpath: //input[2]is found successfully
+15072 [Test worker] INFO  manager.MyListener -%PARSER_ERROR[kvp]- Start searching element by By.xpath: //button[2]
+15097 [Test worker] INFO  manager.MyListener -%PARSER_ERROR[kvp]- The element with locator by By.xpath: //button[2]is found successfully
+15136 [Test worker] INFO  manager.MyListener -%PARSER_ERROR[kvp]- Start searching element by By.xpath: //a[.='ADD']
+16456 [Test worker] INFO  manager.MyListener -%PARSER_ERROR[kvp]- The element with locator by By.xpath: //a[.='ADD']is found successfully
+22:59:43.260  INFO  manager.MyListener Start searching element by By.xpath: //button[text='Sign Out']
+22:59:53.331  INFO  manager.MyListener The element with locator by By.xpath: //button[text='Sign Out']is found successfully
+22:59:53.336  INFO  tests.TestBase regPositiveTest starts with:tulip3578@gmail.com & Kanareyka17$
+22:59:53.336  INFO  manager.MyListener Start searching element by By.xpath: //a[@href='/login']
+22:59:53.357  INFO  manager.MyListener The element with locator by By.xpath: //a[@href='/login']is found successfully
+22:59:53.443  INFO  manager.MyListener Start searching element by By.xpath: //input[1]
+22:59:53.464  INFO  manager.MyListener The element with locator by By.xpath: //input[1]is found successfully
+22:59:53.657  INFO  manager.MyListener Start searching element by By.xpath: //input[2]
+22:59:53.679  INFO  manager.MyListener The element with locator by By.xpath: //input[2]is found successfully
+22:59:53.825  INFO  manager.MyListener Start searching element by By.xpath: //button[2]
+22:59:53.855  INFO  manager.MyListener The element with locator by By.xpath: //button[2]is found successfully
+22:59:53.914  INFO  manager.MyListener Start searching element by By.xpath: //a[.='ADD']
+22:59:55.163  INFO  manager.MyListener The element with locator by By.xpath: //a[.='ADD']is found successfully
+23:00:55.152  INFO  manager.MyListener Start searching element by By.xpath: //button[text='Sign Out']
+23:01:05.208  INFO  manager.MyListener The element with locator by By.xpath: //button[text='Sign Out']is found successfully
+23:01:05.213  INFO  tests.TestBase regPositiveTest starts with:tulip51@gmail.com & Kanareyka17$
+23:01:05.213  INFO  manager.MyListener Start searching element by By.xpath: //a[@href='/login']
+23:01:05.238  INFO  manager.MyListener The element with locator by By.xpath: //a[@href='/login']is found successfully
+23:01:05.314  INFO  manager.MyListener Start searching element by By.xpath: //input[1]
+23:01:05.336  INFO  manager.MyListener The element with locator by By.xpath: //input[1]is found successfully
+23:01:05.483  INFO  manager.MyListener Start searching element by By.xpath: //input[2]
+23:01:05.514  INFO  manager.MyListener The element with locator by By.xpath: //input[2]is found successfully
+23:01:05.679  INFO  manager.MyListener Start searching element by By.xpath: //button[2]
+23:01:05.696  INFO  manager.MyListener The element with locator by By.xpath: //button[2]is found successfully
+23:01:05.738  INFO  manager.MyListener Start searching element by By.xpath: //a[.='ADD']
+23:01:07.029  INFO  manager.MyListener The element with locator by By.xpath: //a[.='ADD']is found successfully

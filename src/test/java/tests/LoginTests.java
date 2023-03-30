@@ -45,6 +45,7 @@ public class LoginTests extends TestBase {
     public void loginNegativePasswordTest() {
         User user = User.builder().
                 email(correctEmail).
+
                 password(incorrectPassword).
                 build();
         app.getUser().openLoginRegistrationForm();
