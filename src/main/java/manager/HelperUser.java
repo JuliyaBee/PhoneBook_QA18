@@ -9,6 +9,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.reporters.XMLConstants;
 
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
 public class HelperUser extends HelperBase {
     public HelperUser(WebDriver wd) {
 
@@ -40,12 +43,15 @@ public class HelperUser extends HelperBase {
     }
 
     public void fillLoginRegistrationForm(User user) {
+      //  type(By.xpath("//input[1]"), user.getEmail());
         type(By.xpath("//input[1]"), user.getEmail());
         type(By.xpath("//input[2]"), user.getPassword());
     }
 
     public void openLoginRegistrationForm() {
 //     //   wd.findElement(By.xpath("//a[@href='/login']")).click();
+
+        wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         click(By.xpath("//a[@href='/login']"));
     }
 
@@ -57,6 +63,7 @@ public class HelperUser extends HelperBase {
         click(By.xpath("//button[.='Sign Out']"));
     }
 
+
     public boolean isLogged() {
         return isElementPresent(By.xpath("//button[text='Sign Out']"));
     }
@@ -65,4 +72,9 @@ public class HelperUser extends HelperBase {
         click(By.xpath("//button[1]"));
     }
 
-}
+    public void clickOkButton(){
+        if (isElementPresent(By.xpath("//button[.='Ok']"))){
+            click(By.xpath("//button[.='Ok']"));
+        }
+
+}}

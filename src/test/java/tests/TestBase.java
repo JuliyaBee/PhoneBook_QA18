@@ -1,17 +1,21 @@
 package tests;
 
 import manager.ApplicationManager;
+import manager.NGListener;
+import org.openqa.selenium.remote.BrowserType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
 
+@Listeners(NGListener.class)
 public class TestBase {
     // WebDriver wd;
-    public static ApplicationManager app = new ApplicationManager();
+    public static ApplicationManager app = new ApplicationManager(
+            System.getProperty("browser", BrowserType.CHROME)//default CHROME
+    );
     Logger logger = LoggerFactory.getLogger(TestBase.class);
 
-    @BeforeSuite
+    @BeforeSuite(alwaysRun = true)
 //    public void stop(){
 //        wd.quit();
 //    }
@@ -24,10 +28,10 @@ public class TestBase {
 //        wd.navigate().to("https://telranedu.web.app/home");
 //        wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 //    }
-    @AfterSuite
+    @AfterSuite(alwaysRun = true)
     public void tearDown() {
         // wd.quit();
-        app.stop();
+      //  app.stop();
     }
 
 //    public void logOut() {

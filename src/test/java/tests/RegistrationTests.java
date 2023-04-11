@@ -1,5 +1,6 @@
 package tests;
 
+import manager.ProviderData;
 import models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class RegistrationTest extends TestBase {
+public class RegistrationTests extends TestBase {
     WebDriver wd;
     int i = (int) ((System.currentTimeMillis() / 1000) % 3600);
     String correctEmail = "tulip" + i + "@gmail.com";
@@ -19,7 +20,7 @@ public class RegistrationTest extends TestBase {
     String emptyPassword = "";
     // FluentWait<WebDriver>wait;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void preCondition() {
         if (app.getUser().isLogged()) {
             app.getUser().logOut();
@@ -35,14 +36,16 @@ public class RegistrationTest extends TestBase {
 //    }
 
 
-    @Test
+    @Test(groups={"smoke"})
     public void regPositiveTest() {
+
         User user = User.builder().
                 email(correctEmail).
                 password(correctPassword).
                 build();
-        logger.info("regPositiveTest starts with:" + user.getEmail() + " & " + user.getPassword());
+
         app.getUser().openLoginRegistrationForm();
+        logger.info("regPositiveTest starts with: " + user.getEmail() + " & " + user.getPassword());
         app.getUser().fillLoginRegistrationForm(user);
         app.getUser().submitRegistration();
         logger.info("regPositiveTest completed");
@@ -99,11 +102,11 @@ public class RegistrationTest extends TestBase {
         Assert.assertTrue(app.getUser().isErrorFormatMessage());
         Assert.assertTrue(app.getUser().isAlertPresent());
     }
-}
 
-//   @AfterMethod
-//    public void tearDown() {
+
+   @AfterMethod(alwaysRun = true)
+  public void tearDown() {
 //        wd.quit();
-//    }
+  }}
 //
 //}
