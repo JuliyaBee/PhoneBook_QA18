@@ -51,6 +51,22 @@ public class RegistrationTests extends TestBase {
         logger.info("regPositiveTest completed");
         Assert.assertTrue(app.getUser().isElementPresent(By.xpath("//a[.='ADD']")));
     }
+    @Test(dataProvider = "registrationCSV()", dataProviderClass = ProviderData.class,groups={"smoke"})
+    public void regPositiveTestCSV(User user) {
+
+//        User user = User.builder().
+//                email(correctEmail).
+//                password(correctPassword).
+//                build();
+
+        app.getUser().openLoginRegistrationForm();
+       // logger.info("regPositiveTest starts with: " + user.getEmail() + " & " + user.getPassword());
+        app.getUser().fillLoginRegistrationForm(user);
+        app.getUser().submitRegistration();
+        logger.info("regPositiveTest completed");
+        Assert.assertTrue(app.getUser().isElementPresent(By.xpath("//a[.='ADD']")));
+    }
+
 
 
     //  public void pause(int time) {

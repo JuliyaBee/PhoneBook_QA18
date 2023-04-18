@@ -57,3 +57,11 @@ task tests(type: Test){
         }
     }
 }
+task configTest(type: Test ){
+    useTestNG(){
+        suites 'src/test/resources/config1.xml'
+      if(project.hasProperty('configuration')) {
+          systemProperty 'configuration', "${configuration}"
+      }
+    }
+}

@@ -7,6 +7,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.*;
 
+import java.io.IOException;
+
 @Listeners(NGListener.class)
 public class TestBase {
     // WebDriver wd;
@@ -19,7 +21,7 @@ public class TestBase {
 //    public void stop(){
 //        wd.quit();
 //    }
-    public void setUp() {
+    public void setUp() throws IOException {
         app.init();
     }
 

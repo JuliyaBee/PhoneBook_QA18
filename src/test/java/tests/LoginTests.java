@@ -48,6 +48,33 @@ public class LoginTests extends TestBase {
         app.getUser().submitLogin();
         Assert.assertTrue(app.getUser().isElementPresent(By.xpath("//a[.='ADD']")));
     }
+    @Test(invocationCount = 1, groups={"smoke"})
+
+    public void loginPositiveTestCSV(User user) {
+//          new User;//модифицированные сэтторы
+//        User user = User.builder()
+//                .email(correctEmail)
+//                .password(correctPassword)
+//                .build();
+
+        app.getUser().openLoginRegistrationForm();
+        app.getUser().fillLoginRegistrationForm(user);
+        app.getUser().submitLogin();
+        Assert.assertTrue(app.getUser().isElementPresent(By.xpath("//a[.='ADD']")));
+    }
+    @Test
+    public void loginPositiveTestConfig() {
+//          new User;//модифицированные сэтторы
+//        User user = User.builder()
+//                .email(correctEmail)
+//                .password(correctPassword)
+//                .build();
+
+        app.getUser().openLoginRegistrationForm();
+        app.getUser().fillLoginRegistrationForm(app.getEmail(), app.getPassword());
+        app.getUser().submitLogin();
+        Assert.assertTrue(app.getUser().isElementPresent(By.xpath("//a[.='ADD']")));
+    }
 
     @Test(groups = {"smoke", "regress"})
     public void loginNegativeEmailTest() {
@@ -82,9 +109,9 @@ public class LoginTests extends TestBase {
         app.getUser().fillLoginRegistrationForm(user);
         app.getUser().submitLogin();
     }
-    @AfterMethod(alwaysRun = true)
-   public void postCondition() {
-//    app.getUser().clickOkButton();
-    }
+//    @AfterMethod(alwaysRun = true)
+//   public void postCondition() {
+////    app.getUser().clickOkButton();
+//    }
     }
 
